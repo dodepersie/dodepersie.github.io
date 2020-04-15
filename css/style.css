@@ -1,167 +1,415 @@
-* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-html { scroll-behavior: smooth; }
-
-h1, h3, h5 {
-	text-align: center;
-}
-
-::-webkit-scrollbar {
-	width: 20px;
+* {
+box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
-	background: #f1f1f1; 
-}
- 
-::-webkit-scrollbar-thumb {
-	background: #888; 
+html {
+scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-thumb:hover {
-	background: #555; 
+body {
+margin: 0;
+font-family: 'Montserrat', sans-serif;
+cursor: default;
 }
 
-img {
-	width: 100%;
-	max-width: 400px;
-	height: auto;
-	vertical-align: middle;
+hr {
+border-top: 1px solid #eee;
 }
 
-/* Add a black background color to the top navigation */
-.topnav, #topnav {
-	background-color: #333;
-	letter-spacing: 5px;
-	overflow: hidden;
-	position: fixed; /* Make it stick/fixed */
-	top: 0px;
-	width: 100%; /* Full width */
-	transition: top 0.5s; /* Transition effect when sliding down (and up) */
-	-webkit-transition: top 0.5s;
+a {
+text-decoration: none;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a, #topnav a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
+.cursor {
+cursor: pointer;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover, #topnav a:hover {
-	background-color: #ddd;
-	color: black;
+.text-title {
+font-size: 45px;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active, #topnav a.active {
-	background-color: #4CAF50;
-	color: white;
+.center-text {
+text-align: center;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-	display: none;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-/* scroll to top */
-.scrollup {
-    position:fixed;
-    width:40px;
-    height:40px;
-    bottom:0px;
-    right:20px;
-}
-
-a.scrollup {
-	outline:0;
-	text-align: center;
-}
-
-a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
-	opacity:1;
-	text-decoration:none;
-}
-a.scrollup i {
-	margin: auto;
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	color: #fff;
-}
-a.scrollup i:hover {
-	text-decoration:none;
-}
-
+/* Header of the page */
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("1.jpg");
-	background-size: cover;
-	background-position: center;
-	max-width: 100%;
-	position: relative;
-	height: 350px;
-	color: #FFF;
-	padding: 10px;
-	transition: 0.7s;
-	-webkit-transition: 0.7s;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/1.jpg") center;
+color: #fff;
+text-align: center;
+padding: 100px;
+cursor: default;
 }
 
-.header-text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	z-index: 2;
-	transform: translate(-50%, -50%);
-	text-align: center;
+/* Increase h1 font-size in header class */
+.header h1 {
+font-size: 40px;
 }
 
+/* Introduction */
+.introduction {
+background-color: #1abc9c; /* Green */
+color: #ffffff;
+padding-top: 45px;
+padding-bottom: 45px;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+}
+
+/* Introduction Image */
+.introduction-img {
+width: 315px;
+height: 290px;
+border-radius: 50%;
+}
+
+.introduction h1 {
+font-size: 45px;
+}
+
+.introduction h3 {
+font-size: 25px;
+}
+
+/* Content */
+.content {
+background-color: #474e5d;
+color: #ffffff;
+padding-top: 70px;
+padding-bottom: 70px;
+padding-left: 150px;
+padding-right: 150px;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+}
+
+.content-2 {
+margin: auto;
+padding: 35px;
+width: 50%;
+text-align: justify;
+font-size: 24px;
+line-height: 1.8;
+}
+
+.content-2 h3 {
+text-align: center;
+}
+
+/* Navigation bar */
+#navigation-bar {
+overflow: hidden;
+background-color: #333;
+font-family: 'Open Sans', sans-serif;
+top: -50px;
+position: fixed;
+width: 100%;
+transition: top 0.5s;
+}
+
+/* Navigation link style */
+#navigation-bar a {
+float: left;
+display: block;
+color: #fff;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+letter-spacing: 5px;
+}
+
+/* When mouse hover to navigation bar link */
+#navigation-bar a:hover {
+background-color: #ddd;
+color: #000;
+transition: 0.5s;
+}
+
+/* When you in current page */
+#navigation-bar a.active {
+background-color: #4CAF50;
+color: #fff;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.stickyNavBar {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.stickyNavBar + .main-menu {
+padding-top: 60px;
+}
+
+/* Body of the page */
+.wrapper {
+display: flex;
+flex-wrap: wrap;
+}
+
+/* Content or main menu */
+.main-menu {
+flex: 100%;
+background-color: #fff;
+padding: 16px;
+text-align: center;
+}
+
+/* Slidebox */
+#slide-text, #slide {
+padding: 5px;
+text-align: center;
+border: 1px solid #4CAF50;
+color: #000;
+font-family: 'Open Sans', sans-serif;
+}
+
+#slide-text {
+background-color: #474e5d;
+padding-top: 110px;
+padding-bottom: 110px;
+color: #fff;
+display: none;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer */
 .footer {
-	margin: auto;
-	position: relative;
-	font-family: 'Sen', sans-serif;
-	width: 20%;
+text-align: center;
+background: #2f2f2f;
+color: #fff;
+padding: 10px;
+cursor: default;
+font-family: 'Open Sans', sans-serif;
 }
 
-@media only screen and (max-width:800px) {
-/* For tablets: */
-#wrapper, #main {
-	width: 100%;
-	padding: 0;
+.footer a {
+text-decoration: none;
+color: #fff;
+}
+
+.active-2 {
+color: #4CAF50;
+}
+
+/* Style for FontAwesome Icon */
+.fa {
+text-decoration: none;
+width: 20px;
+}
+
+.fa:hover {
+color: #fff;
+opacity: 0.7;
+text-decoration: none;
+transition: 0.5s;
+}
+
+.fa-facebook, .fa-instagram, .fa-whatsapp, .fa-user, .fa-calendar,
+.fa-calendar-o, .fa-home, .fa-music, .fa-refresh, .fa-sign-in, .fa-trash-o {
+margin: 10px;
+padding: 5px;
+color: white;
+}
+
+/* Scroll to go top Top Page */
+
+a#goToTop {
+color: #fff;
+text-decoration: none;
+}
+
+a#goToTop i {
+color: #fff;
+}
+
+a#goToTop i:hover {
+text-decoration:none;
+}
+
+/* FORM */
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+
+/* Style the submit button */
+button[type=submit], button[type=reset] {
+background-color: #4CAF50;
+color: white;
+padding: 5px 15px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+margin-left: 5px;
+}
+
+/* Style the search field */
+form.search-box input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 78%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.search-box button {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.search-box button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.search-box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style the container */
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+float: left;
+width: 25%;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Table */
+table {
+width: 100%;
+}
+
+th, td {
+padding: 15px;
+}
+
+td {
+text-align: center;
+}
+
+table tr:nth-child(even) {
+background-color: #eee;
+}
+table tr:nth-child(odd) {
+background-color: #fff;
+}
+table th {
+color: white;
+background-color: black;
+}
+
+/* Table Image */
+.table-img {
+max-width: 200px;
+height: auto;
+margin: auto;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.col-25, .col-75, button[type=submit], button[type=reset], table {
+width: 100%;
+margin-top: 5px;
 }
 }
-@media only screen and (max-width:500px) {
-/* For mobile phones: */
-#wrapper, #main {
-	width: 100%;
+
+/* Responsive layout for mobile phones */
+@media screen and (max-width: 600px) {
+.introduction, .introduction h3, .content-2, table {
+width: 100%;
+}
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
+}
+}
+
+/* Responsive layout for tablet */
+@media screen and (max-width: 768px) {
+.introduction {
+padding: 20px;
+margin: auto;
+}
+.introduction, .introduction h3, .content-2, table {
+width: 100%;
+}
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
+}
+}
+
+/* Responsive layout for iPad Pro */
+@media screen and (max-width: 1024px) {
+.introduction, .introduction h3, .content-2 {
+width: 100%;
+padding: 20px;
+}
+
+table {
+width: 100%;
+margin-left: -15px;
+}
+
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
 }
 }

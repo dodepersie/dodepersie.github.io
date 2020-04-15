@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>About - Mahadi Saputra</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="navigation-bar">
+		<a href="index.html">Home</a>
+		<a href="about.html" class="active">About</a>
+		<a href="contact.html">Contact</a>
+	</div>
+
+	<div class="header">
+		<h1>MAHADI SAPUTRA</h1>
+		<p>Just a simple site ~</p>
+	</div>
+	
+	<div class="introduction">
+		<h1>ABOUT ME</h1>
+	</div>
+	
+	<div id="slide">Click to open or close my biodata !</div>
+	<div id="slide-text">
+		<i class="fa fa-user" aria-hidden="true"></i> Name : <strong>I Dewa Gede Mahadi Saputra</strong>
+		<i class="fa fa-calendar" aria-hidden="true"></i> DOB : <strong>14/03/2001</strong><br />
+		<i class="fa fa-calendar-o" aria-hidden="true"></i> Age : <strong>19 years old</strong>
+		<i class="fa fa-home" aria-hidden="true"></i> Hometown : <strong>Tabanan, Bali, ID</strong>
+		<i class="fa fa-music" aria-hidden="true"></i>Fav Music Genre : <strong>KPOP, Jpop, Western</strong><br />
+		<i class="fa fa-refresh" aria-hidden="true"></i>Education : <strong>ITB STIKOM BALI x HELP UNIVERSITY</strong>
+	</div>
+	
+	<div class="content-2">
+		<h3>A little story about me</h3>
+		<hr />
+			
+		First, I bought a computer by my mother in 2009. At that time I only used the computer only to play offline games. Then, I was bought a Modem in 2011 at that time I was still in elementary school and trying to make a blog. In 2011 I started to create a blog, which I named <strong>DODE-XP</strong>, the name was inspired by the legendary blog at that time namely <strong>RIMO-XP</strong> which contained software, games, office, etc.
+		<br /><br />
+		When I was managing a blog, there was a lot I learned about HTML and CSS, my blog switched platforms from Blogger to Wordpress in 2012, I bought hosting and domain with a total of 120,000 IDR at that time, I bought a domain with the name <strong>DODE-XP.COM</strong>
+		<br /><br />
+		And in 2011 to 2012 I got a lot of friends because I joined one of the Indonesian Blogger group on Facebook. And at that time, I was also asked by someone to make his blog theme and I made a decent income.
+		<br /><br />
+		In 2012, <strong>DODE-XP.COM</strong> got a lot of traffics and page views could reach 50,000 traffics and 100,000 page views a day. Then I put up ads on my website and get a decent income, at least it can make my parents happy ^^
+		<br /><br />
+		In 2013 to 2015 I created a website to share Twitter followers with each other, that's where I got a lot of lessons about PHP and a bit mySQL. And hopefully, until 2020 I still remember HTML, CSS and PHP well.
+	</div>
+		
+	
+	<div class="footer">
+		<p><a href="gallery.html">Gallery</a>&nbsp;&nbsp;
+		<a href="quote.html">Quote</a></p>
+		<a href="https://www.facebook.com/DodePersie" target="_blank" class="fa fa-facebook"></a>
+		<a href="https://instagram.com/DodePersie" target="_blank" class="fa fa-instagram"></a>
+		<a href="https://wa.me/6287862191120" target="_blank" class="fa fa-whatsapp"></a>
+		<a href="#top" id="goToTop" title="Go to top of the page"><i class="fa fa-angle-up active"></i></a>
+		<p>&copy; 2020 Mahadi Saputra - Thanks to W3Schools ~ </p>
+	</div>
+
+	<script>
+	// Javascript
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navigation-bar").style.top = "0";
+	  } else {
+		document.getElementById("navigation-bar").style.top = "-50px";
+	  }
+	}
+	</script>
+	
+	<script>
+	// jQuery
+	$("a[href='#top']").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+	});
+	</script>
+	
+	<script> 
+	$(document).ready(function(){
+	  $("#slide").click(function(){
+		$("#slide-text").slideToggle("slow");
+	  });
+	});
+	</script>
+	
+</body>
+</html>
