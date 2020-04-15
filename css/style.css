@@ -171,11 +171,12 @@ font-family: 'Open Sans', sans-serif;
 
 #slide-text {
 background-color: #474e5d;
-padding-top: 110px;
-padding-bottom: 110px;
+padding-top: 103px;
+padding-bottom: 103px;
 color: #fff;
 display: none;
 font-family: 'Montserrat', sans-serif;
+line-height: 2;
 }
 
 /* Footer */
@@ -193,28 +194,8 @@ text-decoration: none;
 color: #fff;
 }
 
-.active-2 {
+.footer a.active-2 {
 color: #4CAF50;
-}
-
-/* Style for FontAwesome Icon */
-.fa {
-text-decoration: none;
-width: 20px;
-}
-
-.fa:hover {
-color: #fff;
-opacity: 0.7;
-text-decoration: none;
-transition: 0.5s;
-}
-
-.fa-facebook, .fa-instagram, .fa-whatsapp, .fa-user, .fa-calendar,
-.fa-calendar-o, .fa-home, .fa-music, .fa-refresh, .fa-sign-in, .fa-trash-o {
-margin: 10px;
-padding: 5px;
-color: white;
 }
 
 /* Scroll to go top Top Page */
@@ -253,7 +234,7 @@ display: inline-block;
 button[type=submit], button[type=reset] {
 background-color: #4CAF50;
 color: white;
-padding: 5px 15px;
+padding: 15px 20px;
 border: none;
 border-radius: 4px;
 cursor: pointer;
@@ -263,36 +244,36 @@ margin-left: 5px;
 
 /* Style the search field */
 form.search-box input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 78%;
-  background: #f1f1f1;
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 78%;
+background: #f1f1f1;
 }
 
 /* Style the submit button */
 form.search-box button {
-  float: right;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
+float: right;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none; /* Prevent double borders */
+cursor: pointer;
 }
 
 form.search-box button:hover {
-  background: #0b7dda;
+background: #0b7dda;
 }
 
 /* Clear floats */
 form.search-box::after {
-  content: "";
-  clear: both;
-  display: table;
+content: "";
+clear: both;
+display: table;
 }
 
 /* Style the container */
