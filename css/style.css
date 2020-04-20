@@ -129,6 +129,7 @@ line-height: 1.8;
 text-align: center;
 }
 
+<<<<<<< HEAD
 /* Contact Form */
 .contact-form {
 width: 50%;
@@ -137,6 +138,9 @@ padding: 0;
 }
 
 /* Navigation bar */
+=======
+/* Navigation Bar */
+>>>>>>> 9df9d5ca1e672d64686ae0008c8d59d8c7bf3109
 #navigation-bar {
 overflow: hidden;
 background-color: #333;
